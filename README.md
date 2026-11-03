@@ -22,7 +22,8 @@ This project is developed for Digital Logic Design. It simulates the working of 
 - Add your actual programming language or simulation software here.
 
 ## Project Team
-- Waleed Khan
+- Waleed Khan(24-cs-015)
+- Muhammad Afaq(24-cs-007)
 
 ## Course
 Digital Logic Design
