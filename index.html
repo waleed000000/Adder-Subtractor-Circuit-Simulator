@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adder & Subtractor Circuit Simulator</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. Header Area -->
+        <header>
+            <div class="logo-box">Logo</div>
+            <div class="header-title">
+                <h1>Adder & Subtractor Circuit Simulator</h1>
+            </div>
+            <div class="header-subtitle">Digital Logic Circuit</div>
+        </header>
+
+        <!-- 2. Circuit Selector Tabs -->
+        <div class="circuit-tabs">
+            <button class="tab-btn active">Half Adder</button>
+            <button class="tab-btn">Full Adder</button>
+            <button class="tab-btn">Half Subtractor</button>
+            <button class="tab-btn">Full Subtractor</button>
+        </div>
+
+        <!-- 3. Top Row Grid (Input, Circuit, Output) -->
+        <div class="main-grid">
+            <!-- Input Area -->
+            <div class="card">
+                <h2 class="card-title">Input Switches</h2>
+                <div class="input-group">
+                    <label>Input A:</label>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label>Input B:</label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label>Carry In:</label>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <button class="btn-run">▶ Run</button>
+            </div>
+
+            <!-- Circuit Diagram Area -->
+      <div class="circuit-diagram-area">
+
+    <svg viewBox="0 0 500 250"
+         width="100%"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <!-- XOR Gate Inputs -->
+        <text x="15" y="65">A</text>
+        <text x="15" y="115">B</text>
+
+        <line x1="35" y1="60" x2="180" y2="60"
+              stroke="#333" stroke-width="2"/>
+
+        <line x1="35" y1="110" x2="180" y2="110"
+              stroke="#333" stroke-width="2"/>
+
+        <!-- XOR Gate -->
+        <rect x="180" y="35" width="100" height="100"
+              rx="15" fill="#e8f0fe"
+              stroke="#1a365d" stroke-width="2"/>
+
+        <text x="230" y="92"
+              text-anchor="middle"
+              font-size="20"
+              font-weight="bold"
+              fill="#1a365d">XOR</text>
+
+        <!-- Sum Output -->
+        <line x1="280" y1="85" x2="420" y2="85"
+              stroke="#333" stroke-width="2"/>
+
+        <text x="425" y="90"
+              font-size="16"
+              fill="#2b580c">Sum</text>
+
+        <!-- AND Gate Inputs -->
+        <text x="15" y="170">A</text>
+        <text x="15" y="220">B</text>
+
+        <line x1="35" y1="165" x2="180" y2="165"
+              stroke="#333" stroke-width="2"/>
+
+        <line x1="35" y1="215" x2="180" y2="215"
+              stroke="#333" stroke-width="2"/>
+
+        <!-- AND Gate -->
+        <rect x="180" y="140" width="100" height="100"
+              rx="15" fill="#e6f4ea"
+              stroke="#2b580c" stroke-width="2"/>
+
+        <text x="230" y="197"
+              text-anchor="middle"
+              font-size="20"
+              font-weight="bold"
+              fill="#2b580c">AND</text>
+
+        <!-- Carry Output -->
+        <line x1="280" y1="190" x2="420" y2="190"
+              stroke="#333" stroke-width="2"/>
+
+        <text x="425" y="195"
+              font-size="16"
+              fill="#2b580c">Carry</text>
+
+    </svg>
+
+</div>
+
+            <!-- Result / Output Area -->
+            <div class="card">
+                <h2 class="card-title">Output</h2>
+                <div class="output-group">
+                    <span>Sum :</span>
+                    <div class="result-box">1</div>
+                </div>
+                <div class="output-group">
+                    <span>Carry :</span>
+                    <div class="result-box">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Bottom Row Grid (Truth Table & About) -->
+        <div class="bottom-grid">
+            <!-- Truth Table -->
+            <div class="card">
+                <h2 class="card-title">Truth Table</h2>
+                <table class="truth-table">
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>Sum</th>
+                            <th>Carry</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                        <tr><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                        <tr><td>1</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- About Area -->
+            <div class="card">
+                <h2 class="card-title">About</h2>
+                <p class="about-text">
+                    This simulator allows users to test combinational logic circuits such as half adders, full adders, half subtractors, and full subtractors interactively.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
